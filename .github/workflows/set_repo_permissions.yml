@@ -1,0 +1,23 @@
+name: Set Repo Permissions
+
+on:
+  # Run automatically when master updated
+  push:
+    branches: 
+    - master
+  # Permit manual trigger
+  workflow_dispatch:
+
+jobs:
+  set_repo_permissions:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set Repo Permissions
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        ./repoUpdateScript.sh
+

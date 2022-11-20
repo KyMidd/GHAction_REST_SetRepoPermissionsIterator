@@ -1,0 +1,5 @@
+# The COLLECTION_LEAD_TEAM_GITHUB_SLUG can be left blank, and permissions won't be assigned
+GH_ORG,GH_REPO,REQUIRED_APPROVERS_COUNT,COLLECTION_LEAD_TEAM_GITHUB_SLUG
+org_name,repo_name1,1,,
+org_name,repo_name2,1,1,teamname2
+org_name,repo_name3,2,1,teamname3
